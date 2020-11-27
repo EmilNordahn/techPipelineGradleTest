@@ -9,7 +9,7 @@ pipeline {
             steps {
                 sh 'ls -a'
                 sh 'cd ./ && ls -a'
-                sh 'git update-index --chmod +x ./gradlew'
+                sh 'chmod +x ./gradlew'
                 sh './gradlew assemble'
             }
         }
