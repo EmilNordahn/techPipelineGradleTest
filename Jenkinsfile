@@ -8,7 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls -a'
-                //sh 'git update-index --chmod +x gradlew'
+                sh 'cd ./ && ls -a'
+                sh 'git update-index --chmod +x gradlew'
                 sh 'gradlew assemble'
             }
         }
