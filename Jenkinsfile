@@ -7,8 +7,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'git update-index --chmod=+x gradlew'
-                sh './gradlew assemble'
+                sh 'ls -a'
+                //sh 'git update-index --chmod +x gradlew'
+                sh 'gradlew assemble'
             }
         }
         stage('Test') {
